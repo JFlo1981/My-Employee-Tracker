@@ -21,7 +21,7 @@ VALUES ("Smith", "John", 1, NULL),
        ("West", "Ron", 5, NULL),
        ("Henry", "Adam", 6, 5),
        ("Voight", "Wanda", 7, 5),
-       ("Cobb", "Mary", 8 5)
+       ("Cobb", "Mary", 8, 5)
 
 
 
