@@ -9,7 +9,7 @@ VALUES ("Cashier", 15000.00, 1),
        ("Accountant", 20000.00, 2),
        ("Lead Marketing Director", 25000.00, 3),
        ("Grassroots Marketer", 22000.00, 3),
-       ("Tomato/Lead Grower", 18000.00, 4),
+       ("Tomato Grower", 18000.00, 4),
        ("Cucumber Grower", 17500.00, 4),
        ("Spinach Grower", 16750.00, 4);
 
@@ -19,9 +19,9 @@ VALUES ("Smith", "John", 1, NULL),
        ("Avery", "Lucas", 3, NULL ),
        ("Henderson", "Mel", 4, 3),
        ("West", "Ron", 5, NULL),
-       ("Henry", "Adam", 6, 5),
-       ("Voight", "Wanda", 7, 5),
-       ("Cobb", "Mary", 8, 5)
+       ("Henry", "Adam", 5, 5),
+       ("Voight", "Wanda", 6, 5),
+       ("Cobb", "Mary", 7, 5)
 
 
 
