@@ -2,7 +2,7 @@ INSERT INTO department (department_name)
 VALUES ("Sales"),
        ("Finance"),
        ("Marketing"),
-       ("Growers")
+       ("Growers");
 
 INSERT INTO roles (title, salary, department_id)
 VALUES ("Cashier", 15000.00, 1),
@@ -21,7 +21,7 @@ VALUES ("Smith", "John", 1, NULL),
        ("West", "Ron", 5, NULL),
        ("Henry", "Adam", 5, 5),
        ("Voight", "Wanda", 6, 5),
-       ("Cobb", "Mary", 7, 5)
+       ("Cobb", "Mary", 7, 5);
 
 
 
