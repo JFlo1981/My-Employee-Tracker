@@ -5,14 +5,14 @@ const consoleTable = require("console.table");
 // connect to db
 const db = mysql.createConnection(
     {
-        host: "localhost",
+        host: 'localhost',
         // mysql username
-        user: process.env.DB_US,
+        user: 'root',
         //  mysql password
-        password: process.env.DB_PW,
-        database: "employee",
+        password: '2Boys&&1Girl!',
+        database: 'employee'
     },
-    console.log("connected to employee db")
+    // console.log("connected to employee db")
 );
 
 // server connection
@@ -38,7 +38,7 @@ function employeeDb() {
             'Add an employee',
             'Update an employee role',
             'Exit'
-        ]
+        ],
     }).then(answers => {
         switch('Answer: ', answers.track) {
             case 'View all departments':
@@ -81,7 +81,7 @@ function viewDepartments() {
 
 // view all roles in db 
 function viewRoles() {
-    db.query("SELECT * FROM role",
+    db.query("SELECT * FROM roles",
     function (err, res) {
         if (err) throw err;
         console.table('Roles: ', res);
@@ -109,7 +109,7 @@ function addDepartment() {
                 message: "What is the name of the new department?"
             }
         ]).then(function(answer) {
-            db.query(`INSERT INTO department (name) VALUES ('${answer.addDepartment}')`,
+            db.query(`INSERT INTO department (department_name) VALUES ('${answer.addDepartment}')`,
             (err, res) => {
                 if (err) throw err;
                 console.log("New " + answer.addDepartment + " department added.");
@@ -138,7 +138,7 @@ function addRole() {
             message: "What is the department ID for this role?"
         }
     ]).then(function(answer) {
-        db.query(`INSERT INTO roles (title, salary, department_id) Values ('${answer.addRole}', '${answer.addSalary}', '${answer.addDeptId})`,
+        db.query(`INSERT INTO roles (title, salary, department_id) Values ('${answer.addRole}', '${answer.addSalary}', '${answer.addDeptId}')`,
         (err, res) => {
             if (err) throw err;
             console.log("A " + answer.addRole + " role has been added at a salary of " + answer.addSalary + ".");
@@ -174,7 +174,7 @@ function addEmployee() {
                 choices: ["1", "2", "3", "4"]
             },
         ]).then(function(answer){
-            db.query(`INSERT INTO employee (last_name, first_name, role_id, manager_id) VALUES ('${answer.last_name}', '${answer.first_name}', '${answer.role_id}', '${answer.manager_id})`,
+            db.query(`INSERT INTO employee (last_name, first_name, role_id, manager_id) VALUES ('${answer.last_name}', '${answer.first_name}', '${answer.role_id}', '${answer.manager_id}')`,
             (err, res) => {
                if (err) throw err;
                console.log("Employee " + answer.last_name + ", " + answer.first_name + " added."); 
